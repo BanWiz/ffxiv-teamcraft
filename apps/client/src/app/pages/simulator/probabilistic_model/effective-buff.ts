@@ -1,12 +1,12 @@
 import { Buff } from './buff.enum';
-import { Simulation } from '../simulation/simulation';
+import Simulation from './simulator-state';
 
-export interface EffectiveBuff {
+export default interface EffectiveBuff {
   duration: number;
   stacks: number;
   buff: Buff;
 
-  tick?: (simulationState: Simulation, linear?: boolean) => void;
+  tick?: (simulationState: Simulation) => void;
 
   appliedStep: number;
 }

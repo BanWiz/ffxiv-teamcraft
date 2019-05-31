@@ -1,8 +1,8 @@
 export default abstract class CraftingAction {
-
   protected readonly successRate: number = 0;
   protected readonly potency: number = 0;
   protected readonly durabilityCost: number = 10;
+  protected readonly cpCost: number = 100;
 
   public getSuccessRate() {
     return this.successRate
@@ -16,4 +16,7 @@ export default abstract class CraftingAction {
     return this.durabilityCost
   }
 
+  public getCpCost() {
+    return this.cpCost
+  }
 }
